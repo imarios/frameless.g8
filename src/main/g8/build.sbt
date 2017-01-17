@@ -14,9 +14,28 @@ lazy val root = project.in(file(".")).
     version := "$version$",
     libraryDependencies ++= Seq(
       "io.github.adelbertc" %% "frameless-dataset" % FramelessVersion,
-      "org.apache.spark" %% "spark-core" % SparkVersion % "provided",
-      "org.apache.spark" %% "spark-sql"  % SparkVersion % "provided"
+      "org.apache.spark" %% "spark-core" % SparkVersion,
+      "org.apache.spark" %% "spark-sql"  % SparkVersion
     ),
     initialize ~= { _ => makeColorConsole() },
-    initialCommands in console := """ """
+    initialCommands in console :=
+      """
+        |import org.apache.spark.{SparkConf, SparkContext}
+        |import org.apache.spark.sql.SparkSession
+        |import frameless.functions.aggregate._
+        |
+        |val conf = new SparkConf().setMaster("local[*]").setAppName("frameless-repl").set("spark.ui.enabled", "false")
+        |val spark = SparkSession.builder().config(conf).appName("$name$").getOrCreate()
+        |
+        |import spark.implicits._
+        |
+        |spark.sparkContext.setLogLevel("WARN")
+        |
+        |import frameless.TypedDataset
+        |implicit val sqlContenxt = spark.sqlContext
+      """.stripMargin,
+    cleanupCommands in console :=
+      """
+        |spark.stop()
+      """.stripMargin
   )

@@ -2,7 +2,7 @@
 
 A [Giter8][g8] template for [frameless](https://github.com/adelbertc/frameless)!
 
-### Usage
+### Create an sbt project
 
 If you have [Giter8][g8] then simply:
 
@@ -15,6 +15,30 @@ With sbt >= 0.13.13:
 ```bash
 sbt new imarios/frameless.g8.
 ```
+
+### Use the project
+
+Run a simple example
+
+```bash
+sbt run
+```
+
+Bring up a REPL with frameless pre-loaded and ready to experiment:
+
+```
+sbt console
+```
+
+When the REPL loads, try a simple example:
+
+```bash
+scala> val fTypedDataset = TypedDataset.create( (1, "a", true) ::  (10, "b", false) :: (1, "c", true) :: Nil)
+scala> fTypedDataset.show().run()
+```
+
+Follow the frameless [documentation](https://github.com/adelbertc/frameless#documentation)
+for more examples.
 
 
 Template license
