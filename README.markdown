@@ -1,5 +1,20 @@
 A [Giter8][g8] template for [frameless](https://github.com/adelbertc/frameless)!
 
+### Usage
+
+If you have [Giter8][g8] then simply:
+
+```bash
+g8 imarios/frameless.g8
+```
+
+With sbt >= 0.13.13:
+
+```bash
+sbt new imarios/frameless.g8.
+```
+
+
 Template license
 ----------------
 Written in 2017 by Marios Iliofotou (iliofotou@gmail.com)
