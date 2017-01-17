@@ -13,7 +13,7 @@ g8 imarios/frameless.g8
 With sbt >= 0.13.13:
 
 ```bash
-sbt new imarios/frameless.g8.
+sbt new imarios/frameless.g8
 ```
 
 ### Use the project
