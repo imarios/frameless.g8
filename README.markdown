@@ -1,6 +1,6 @@
 ### About
 
-A [Giter8][g8] template for [frameless](https://github.com/typelevel/frameless)!
+A [Giter8][g8] template for [Frameless](https://github.com/typelevel/frameless)! Uses g8 v0.10.0.
 
 ### Create an sbt project
 
@@ -24,7 +24,7 @@ Run a simple example
 sbt run
 ```
 
-Bring up a REPL with frameless pre-loaded and ready to experiment:
+Bring up a REPL with Frameless pre-loaded and ready to experiment:
 
 ```
 sbt console
@@ -33,12 +33,11 @@ sbt console
 When the REPL loads, try a simple example:
 
 ```bash
-scala> val fTypedDataset = TypedDataset.create( (1, "a", true) ::  (10, "b", false) :: (1, "c", true) :: Nil)
+scala> val fTypedDataset = TypedDataset.create((1, "a", true) ::  (10, "b", false) :: (1, "c", true) :: Nil)
 scala> fTypedDataset.show().run()
 ```
 
-Follow the frameless [documentation](https://github.com/adelbertc/frameless#documentation)
-for more examples.
+Follow the Frameless [documentation](https://typelevel.org/frameless/) for more examples.
 
 
 Template license

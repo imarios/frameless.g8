@@ -3,6 +3,7 @@ package $package$
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.SparkSession
 import frameless.functions.aggregate._
+import frameless.syntax._
 
 object Main$name;format="Camel"$ extends App {
   val conf = new SparkConf().setMaster("local[*]").setAppName("frameless-first-example").set("spark.ui.enabled", "false")
