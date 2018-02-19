@@ -1,5 +1,5 @@
-lazy val SparkVersion = "2.2.0"
-lazy val FramelessVersion = "0.4.0"
+lazy val SparkVersion = "2.2.1"
+lazy val FramelessVersion = "0.5.0"
 
 def makeColorConsole() = {
   val ansi = System.getProperty("sbt.log.noformat", "false") != "true"
@@ -10,7 +10,7 @@ lazy val root = project.in(file(".")).
   settings(
     name := "$name$",
     organization := "$organization$",
-    scalaVersion := "2.11.11",
+    scalaVersion := "2.11.12",
     version := "$version$",
     libraryDependencies ++= Seq(
       "org.typelevel" %% "frameless-dataset" % FramelessVersion,
