@@ -26,14 +26,13 @@ lazy val root = project.in(file(".")).
         |import frameless.syntax._
         |
         |val conf = new SparkConf().setMaster("local[*]").setAppName("frameless-repl").set("spark.ui.enabled", "false")
-        |val spark = SparkSession.builder().config(conf).appName("$name$").getOrCreate()
+        |implicit val spark = SparkSession.builder().config(conf).appName("$name$").getOrCreate()
         |
         |import spark.implicits._
         |
         |spark.sparkContext.setLogLevel("WARN")
         |
         |import frameless.TypedDataset
-        |implicit val sqlContenxt = spark.sqlContext
       """.stripMargin,
     cleanupCommands in console :=
       """
