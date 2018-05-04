@@ -1,5 +1,5 @@
-lazy val SparkVersion = "2.2.1"
-lazy val FramelessVersion = "0.5.0"
+lazy val SparkVersion = "2.3.0"
+lazy val FramelessVersion = "0.6.1"
 
 def makeColorConsole() = {
   val ansi = System.getProperty("sbt.log.noformat", "false") != "true"
