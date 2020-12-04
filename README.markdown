@@ -1,7 +1,7 @@
 ### About
 
-A [Giter8][g8] template for [Frameless](https://github.com/typelevel/frameless)! Uses g8 v0.10.0. 
-Targets Frameless v0.5.0.
+A [Giter8][g8] template for [Frameless](https://github.com/typelevel/frameless)! Uses g8 v0.13.1. 
+Targets Frameless v0.9.0.
 
 ### Create an sbt project
 
